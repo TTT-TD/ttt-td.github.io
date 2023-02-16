@@ -196,7 +196,7 @@
       </p>
       <div>
         <section class="flex items-center gap-3 text-sm">
-          <time>2023-02-16 17:59:48</time>
+          <time>2023-02-17 00:35:23</time>
           <span class="text-gray-400">·</span>
           <span>1 min</span>
           <span class="text-gray-400">·</span>
@@ -206,7 +206,7 @@
     </div>
   </header>
   <!-- content -->
-  <article class="post-content mt-10 prose dark:prose-invert post-content">
+  <article class="post-content mt-10 prose dark:prose-invert  prose-code:text-violet-500  prose-code:before:content-[''] prose-code:after:content-['']  post-content">
     <h1 id="2023——博客换到Hexo——ToTheTop"><a href="#2023——博客换到Hexo——ToTheTop" class="headerlink" title="2023——博客换到Hexo——ToTheTop"></a>2023——博客换到Hexo——ToTheTop</h1><p>用了两年多的Typecho目前先停下啦<br>尝尝鲜用Hexo玩玩<br>刚好前天收了个域名<code>ttt.td</code>刚好用上试试<br>加油！</p>
 
   </article>
@@ -385,6 +385,27 @@
 <!-- tocbot end -->
 
 
-</body>
+
+        <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
+        <script>
+        const hasAttr = (e,a) => a.some(_=> e.attr(_)!==undefined);
+        $('a').each(function() {
+          const $this = $(this);
+          if(hasAttr($this,["data-fancybox","ignore-external-link"])) return;
+          const href = $this.attr('href');
+          if (href && href.match('^((http|https|thunder|qqdl|ed2k|Flashget|qbrowser|ftp|rtsp|mms)://)')) {
+            const strs = href.split('/');
+            if (strs.length >= 3) {
+                const host = strs[2];
+                if (host !== '' || window.location.host) {
+                    $this.attr('href', '/go.html?u='+Base64.encode(href)+'').attr('rel', 'external nofollow noopener noreferrer');
+                    if (true) {
+                        $this.attr('target', '_blank');
+                    }
+                }
+            }
+          }
+        });
+        </script></body>
 
 </html>

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ttt.td/2023/02/17/free-images-hosting.html</loc>
+    <loc>https://ttt.td/2023/02/17/self-hosting-giscus.html</loc>
     
     <lastmod>2023-02-16</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://ttt.td/2023/02/16/adguardhome-server-filter-china-domain.html</loc>
+    <loc>https://ttt.td/2023/02/16/build-dns-filter-cn.html</loc>
     
     <lastmod>2023-02-16</lastmod>
     
@@ -20,7 +20,16 @@
   </url>
   
   <url>
-    <loc>https://ttt.td/2023/02/16/use-hexo-created-my-blog.html</loc>
+    <loc>https://ttt.td/2023/02/17/free-img-hosting.html</loc>
+    
+    <lastmod>2023-02-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ttt.td/2023/02/16/undefined.html</loc>
     
     <lastmod>2023-02-16</lastmod>
     
@@ -77,6 +86,13 @@
   </url>
   
   <url>
+    <loc>https://ttt.td/tags/Hexo/</loc>
+    <lastmod>2023-02-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ttt.td/tags/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -101,6 +117,13 @@
   
   <url>
     <loc>https://ttt.td/category/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2023-02-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ttt.td/category/%E7%AC%94%E8%AE%B0/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

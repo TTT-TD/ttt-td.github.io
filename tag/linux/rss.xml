@@ -5,16 +5,58 @@
         <link>https://ttt.td</link>
         <description></description>
         <language>zh</language>
-        <pubDate>Thu, 16 Feb 2023 15:15:27 +0800</pubDate>
-        <lastBuildDate>Thu, 16 Feb 2023 15:15:27 +0800</lastBuildDate>
+        <pubDate>Fri, 17 Feb 2023 04:11:37 +0800</pubDate>
+        <lastBuildDate>Fri, 17 Feb 2023 04:11:37 +0800</lastBuildDate>
         <category>DNS</category>
         <category>Linux</category>
         <category>图床</category>
+        <category>Hexo</category>
         <category>日常</category>
         <item>
-            <guid isPermalink="true">https://ttt.td/2023/02/16/adguardhome-server-filter-china-domain.html</guid>
+            <guid isPermalink="true">https://ttt.td/2023/02/17/self-hosting-giscus.html</guid>
+            <title>自建Giscus为Hexo添加评论功能</title>
+            <link>https://ttt.td/2023/02/17/self-hosting-giscus.html</link>
+            <category>Linux</category>
+            <category>Hexo</category>
+            <pubDate>Fri, 17 Feb 2023 04:11:37 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;差不多折腾完Hexo应用，弄评论功能的时候找了一下评论相关插件，然后看到了这么一篇文章&lt;br&gt;&lt;a href=&#34;https://www.v2ex.com/t/535608&#34;&gt;建议大家弃用 Gitalk 和 Gitment 等权限过高的 Github OAuth App&lt;/a&gt;&lt;br&gt;翻了一堆资料找到了这个项目：&lt;a href=&#34;https://github.com/giscus/giscus&#34;&gt;Giscus&lt;/a&gt;&lt;br&gt;这个不属于OAuth应用，与此同时，我想自建！！做一下记录&lt;/p&gt;
+&lt;h2 id=&#34;准备工作-废话&#34;&gt;&lt;a href=&#34;#准备工作-废话&#34; class=&#34;headerlink&#34; title=&#34;准备工作(废话)&#34;&gt;&lt;/a&gt;准备工作(废话)&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;一个域名&lt;/li&gt;
+&lt;li&gt;一台VPS&lt;/li&gt;
+&lt;li&gt;一个Github账号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;创建应用&#34;&gt;&lt;a href=&#34;#创建应用&#34; class=&#34;headerlink&#34; title=&#34;创建应用&#34;&gt;&lt;/a&gt;创建应用&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;去&lt;a href=&#34;https://github.com/settings/apps/new&#34;&gt;这个页面&lt;/a&gt;开始创建&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub App Name&lt;/strong&gt; —— 随便填&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Homepage URL&lt;/strong&gt; —— 填写准备的域名 https:&amp;#x2F;&amp;#x2F;域名&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Callback URL&lt;/strong&gt; —— 填写https:&amp;#x2F;&amp;#x2F;域名&amp;#x2F;api&amp;#x2F;oauth&amp;#x2F;authorized&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Expire user authorization tokens&lt;/strong&gt; —— 取消勾选&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Request user authorization (OAuth) during installation&lt;/strong&gt; —— 取消勾选&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Repository permissions&lt;/strong&gt; —— 找到&lt;code&gt;Discussions&lt;/code&gt;选择&lt;code&gt;Read &amp;amp; write&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;User permissions&lt;/strong&gt; —— &lt;strong&gt;Where can this GitHub App be installed?&lt;strong&gt;处选择&lt;/strong&gt;Only on this account&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;Create GitHub App&lt;/strong&gt;按钮开始创建&lt;/li&gt;
+&lt;li&gt;创建好&lt;strong&gt;Client Secret&lt;/strong&gt;，同时保存好&lt;strong&gt;App ID&lt;/strong&gt;、&lt;strong&gt;Client ID&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;往下翻，点击&lt;strong&gt;Generate a private key&lt;/strong&gt;，会下载一个证书文件，先保存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;配置Supabase缓存表&#34;&gt;&lt;a href=&#34;#配置Supabase缓存表&#34; class=&#34;headerlink&#34; title=&#34;配置Supabase缓存表&#34;&gt;&lt;/a&gt;配置Supabase缓存表&lt;/h2&gt;&lt;p&gt;去&lt;a href=&#34;https://supabase.io/&#34;&gt;https://supabase.io/&lt;/a&gt;注册用户并登陆&lt;br&gt;创建一个项目，接着进入项目创建一个TABLE，名字用&lt;code&gt;installation_access_tokens&lt;/code&gt;&lt;br&gt;创建表，使用import导入如下内容&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;installation_id: int8, no default value, primary key, uncheck Is Identity&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;token: varchar, no default value&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;expires_at: timestamptz, no default value&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;created_at: timestamptz, default value NOW()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;updated_at: timestamptz, default value NOW()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;获取项目URL(格式是&lt;a href=&#34;https://xxxxx.supabase.co/&#34;&gt;https://xxxxx.supabase.co&lt;/a&gt;)&lt;br&gt;获取service_role值，保存&lt;/p&gt;
+&lt;h2 id=&#34;安装Nodejs、npm、yarn等软件&#34;&gt;&lt;a href=&#34;#安装Nodejs、npm、yarn等软件&#34; class=&#34;headerlink&#34; title=&#34;安装Nodejs、npm、yarn等软件&#34;&gt;&lt;/a&gt;安装Nodejs、npm、yarn等软件&lt;/h2&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo apt purge nodejs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo apt autoremove &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo apt update&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo apt install -y curl&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo apt install nodejs build-essential -y&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;node --version&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo corepack &lt;span class=&#34;built_in&#34;&gt;enable&lt;/span&gt; npm&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo corepack &lt;span class=&#34;built_in&#34;&gt;enable&lt;/span&gt; yarn&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm --version&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yarn --version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;部署Giscus&#34;&gt;&lt;a href=&#34;#部署Giscus&#34; class=&#34;headerlink&#34; title=&#34;部署Giscus&#34;&gt;&lt;/a&gt;部署Giscus&lt;/h2&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; /opt &lt;span class=&#34;comment&#34;&gt;#进入目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/giscus/giscus.git &lt;span class=&#34;comment&#34;&gt;#拉取源码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; giscus &lt;span class=&#34;comment&#34;&gt;#进入目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cp&lt;/span&gt; .env.example .env.local &lt;span class=&#34;comment&#34;&gt;#重命名配置文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;刚刚保存的东西填进&lt;code&gt;.env.local&lt;/code&gt;文件&lt;br&gt;开始编译和运行测试&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yarn install&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yarn build&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yarn start&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;目前已经运行在&lt;code&gt;0.0.0.0:3000&lt;/code&gt;了&lt;/p&gt;
+&lt;h2 id=&#34;使用PM2配置进程守护&#34;&gt;&lt;a href=&#34;#使用PM2配置进程守护&#34; class=&#34;headerlink&#34; title=&#34;使用PM2配置进程守护&#34;&gt;&lt;/a&gt;使用PM2配置进程守护&lt;/h2&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install -g pm2 &lt;span class=&#34;comment&#34;&gt;#安装pm2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; /opt/giscus &lt;span class=&#34;comment&#34;&gt;#进入运行目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pm2 start yarn -n giscus -- start &lt;span class=&#34;comment&#34;&gt;#使用pm2启动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pm2 save &lt;span class=&#34;comment&#34;&gt;#保存配置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pm2 startup &lt;span class=&#34;comment&#34;&gt;#添加开机启动并注册系统服务&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&#34;https://input-s3.mn.input.im/adm-group/1/20230217/63ee9bc2d107c.png&#34;&gt;&lt;br&gt;如图所示启动成功&lt;/p&gt;
+&lt;h2 id=&#34;配置反向代理&#34;&gt;&lt;a href=&#34;#配置反向代理&#34; class=&#34;headerlink&#34; title=&#34;配置反向代理&#34;&gt;&lt;/a&gt;配置反向代理&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;不码字了，用开始准备的域名反代指向IP:3000即可&lt;/strong&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://ttt.td/2023/02/16/build-dns-filter-cn.html</guid>
             <title>使用AdGuardHome搭建私有DNS并对ChinaDomain进行分流</title>
-            <link>https://ttt.td/2023/02/16/adguardhome-server-filter-china-domain.html</link>
+            <link>https://ttt.td/2023/02/16/build-dns-filter-cn.html</link>
             <category>DNS</category>
             <category>Linux</category>
             <pubDate>Thu, 16 Feb 2023 15:15:27 +0800</pubDate>

@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ttt.td/2023/02/17/free-img-hosting.html</loc>
+    
+    <lastmod>2023-02-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ttt.td/2023/02/16/build-dns-filter-cn.html</loc>
     
     <lastmod>2023-02-16</lastmod>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>https://ttt.td/2023/02/17/self-hosting-giscus.html</loc>
-    
-    <lastmod>2023-02-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ttt.td/2023/02/17/free-img-hosting.html</loc>
     
     <lastmod>2023-02-16</lastmod>
     

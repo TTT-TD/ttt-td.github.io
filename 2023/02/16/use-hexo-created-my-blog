@@ -15,7 +15,7 @@
 
 
 
-<title>使用AdGuardHome搭建私有DNS并对ChinaDomain进行分流 | ToTheTop</title>
+<title>使用Hexo建立了博客 | ToTheTop</title>
 
 
 
@@ -189,27 +189,25 @@
   <header class="overflow-hidden pt-6 pb-6 md:pt-12">
     <div class="pt-4 md:pt-6">
       <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
-        使用AdGuardHome搭建私有DNS并对ChinaDomain进行分流
+        使用Hexo建立了博客
       </h1>
       <p class="mb-6">
         
       </p>
       <div>
         <section class="flex items-center gap-3 text-sm">
-          <time>2023-02-16 17:56:28</time>
+          <time>2023-02-16 17:59:48</time>
           <span class="text-gray-400">·</span>
           <span>1 min</span>
           <span class="text-gray-400">·</span>
-          <span>149 words</span>
+          <span>43 words</span>
         </section>
       </div>
     </div>
   </header>
   <!-- content -->
   <article class="post-content mt-10 prose dark:prose-invert post-content">
-    <h2 id="使用AdGuardHome自建的DNS服务，并对中国域名指定DNS上游"><a href="#使用AdGuardHome自建的DNS服务，并对中国域名指定DNS上游" class="headerlink" title="使用AdGuardHome自建的DNS服务，并对中国域名指定DNS上游"></a>使用AdGuardHome自建的DNS服务，并对中国域名指定DNS上游</h2><p>编辑<code>AdGuardHome.yaml</code>设置<code>upstream_dns_file = &quot;/usr/share/adguardhome.upstream&quot;</code>，设置<code>all_servers = true</code>，设置<code>cache_optimistic = true</code></p>
-<p><img src="https://input-s3.mn.input.im/adm-group/1/20230216/63edd8a26bc44.png" alt="AdGuardHome.png"></p>
-<h1 id="搭建自己的无污染的DNS服务器"><a href="#搭建自己的无污染的DNS服务器" class="headerlink" title="搭建自己的无污染的DNS服务器"></a>搭建自己的无污染的DNS服务器</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装脚本</span></span><br><span class="line">curl -o <span class="string">&quot;/usr/local/bin/upstream.sh&quot;</span> <span class="string">&quot;https://raw.githubusercontent.com/BigUIFU/AGH_SELF/main/DNS/upsteam.sh&quot;</span></span><br><span class="line"><span class="built_in">chmod</span> +x /usr/local/bin/upstream.sh</span><br><span class="line">/usr/local/bin/upstream.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建systemd服务定时更新</span></span><br><span class="line">curl -o <span class="string">&quot;/etc/systemd/system/upstream.service&quot;</span> <span class="string">&quot;https://raw.githubusercontent.com/BigUIFU/AGH_SELF/main/DNS/upsteam.service&quot;</span></span><br><span class="line">curl -o <span class="string">&quot;/etc/systemd/system/upstream.timer&quot;</span> <span class="string">&quot;https://raw.githubusercontent.com/BigUIFU/AGH_SELF/main/DNS/upsteam.timer&quot;</span></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl <span class="built_in">enable</span> upstream.timer</span><br><span class="line">systemctl start upstream.timer</span><br><span class="line">systemctl status upstream</span><br></pre></td></tr></table></figure>
+    <h1 id="2023——博客换到Hexo——ToTheTop"><a href="#2023——博客换到Hexo——ToTheTop" class="headerlink" title="2023——博客换到Hexo——ToTheTop"></a>2023——博客换到Hexo——ToTheTop</h1><p>用了两年多的Typecho目前先停下啦<br>尝尝鲜用Hexo玩玩<br>刚好前天收了个域名<code>ttt.td</code>刚好用上试试<br>加油！</p>
 
   </article>
   <!-- tag -->
@@ -217,11 +215,7 @@
     
       
         <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-          <a href="/tags/DNS/">DNS</a>
-        </span>
-      
-        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
-          <a href="/tags/Linux/">Linux</a>
+          <a href="/tags/%E6%97%A5%E5%B8%B8/">日常</a>
         </span>
       
     
@@ -230,13 +224,13 @@
   <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
     <div>
       
+        <a href="/2023/02/16/adguardhome-server-filter-china-domain" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
+          使用AdGuardHome搭建私有DNS并对ChinaDomain进行分流
+        </a>
+      
     </div>
     <div>
-      
-        <a href="/2023/02/16/use-hexo-created-my-blog/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
-          使用Hexo建立了博客
-          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
-        </a>
       
     </div>
   </div>

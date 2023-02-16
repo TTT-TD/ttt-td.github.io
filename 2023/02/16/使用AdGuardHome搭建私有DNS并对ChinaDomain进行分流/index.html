@@ -15,7 +15,7 @@
 
 
 
-<title>tags | ToTheTop ToDo</title>
+<title>使用AdGuardHome搭建私有DNS并对ChinaDomain进行分流 | ToTheTop ToDo</title>
 
 
 
@@ -119,16 +119,16 @@
         </h2>
       </a>
       <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
-        tags
+        category
       </div>
       <div class="flex-1"></div>
       <div class="flex items-center gap-3">
         
-          <a class="hidden sm:flex" href="/archives">Posts</a>
+          <a class="hidden sm:flex" href="/archives">Archives</a>
         
-          <a class="hidden sm:flex" href="/categories">Categories</a>
+          <a class="hidden sm:flex" href="/category">Categories</a>
         
-          <a class="hidden sm:flex" href="/tags">Tags</a>
+          <a class="hidden sm:flex" href="/tag">Tags</a>
         
         
           
@@ -157,15 +157,15 @@
     <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
       
         <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
-          <a href="/archives" class="flex h-12 sm:h-auto items-center">Posts</a>
+          <a href="/archives" class="flex h-12 sm:h-auto items-center">Archives</a>
         </li>
       
         <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
-          <a href="/categories" class="flex h-12 sm:h-auto items-center">Categories</a>
+          <a href="/category" class="flex h-12 sm:h-auto items-center">Categories</a>
         </li>
       
         <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
-          <a href="/tags" class="flex h-12 sm:h-auto items-center">Tags</a>
+          <a href="/tag" class="flex h-12 sm:h-auto items-center">Tags</a>
         </li>
       
     </ul>
@@ -176,33 +176,49 @@
   <main class="p-12">
     <!-- toc -->
 
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
 <section class="px-6 max-w-prose mx-auto md:px-0">
   <!-- header -->
   <header class="overflow-hidden pt-6 pb-6 md:pt-12">
     <div class="pt-4 md:pt-6">
       <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
-        tags
+        使用AdGuardHome搭建私有DNS并对ChinaDomain进行分流
       </h1>
       <p class="mb-6">
         
       </p>
       <div>
         <section class="flex items-center gap-3 text-sm">
-          <time>2023-02-16 14:34:57</time>
+          <time>2023-02-16 15:20:02</time>
           <span class="text-gray-400">·</span>
           <span>1 min</span>
           <span class="text-gray-400">·</span>
-          <span>0 words</span>
+          <span>150 words</span>
         </section>
       </div>
     </div>
   </header>
   <!-- content -->
   <article class="post-content mt-10 prose dark:prose-invert post-content">
-    
+    <h2 id="使用AdGuardHome自建的DNS服务，并对中国域名指定DNS上游"><a href="#使用AdGuardHome自建的DNS服务，并对中国域名指定DNS上游" class="headerlink" title="使用AdGuardHome自建的DNS服务，并对中国域名指定DNS上游"></a>使用AdGuardHome自建的DNS服务，并对中国域名指定DNS上游</h2><p>编辑<code>AdGuardHome.yaml</code>设置<code>upstream_dns_file = &quot;/usr/share/adguardhome.upstream&quot;</code>，设置<code>all_servers = true</code>，设置<code>cache_optimistic = true</code><br><img src="https://input-s3.mn.input.im/adm-group/1/20230216/63edd8a26bc44.png" alt="AdGuardHome.png"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 搭建自己的无污染的DNS服务器</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装脚本</span></span><br><span class="line">curl -o <span class="string">&quot;/usr/local/bin/upstream.sh&quot;</span> <span class="string">&quot;https://raw.githubusercontent.com/BigUIFU/AGH_SELF/main/DNS/upsteam.sh&quot;</span></span><br><span class="line"><span class="built_in">chmod</span> +x /usr/local/bin/upstream.sh</span><br><span class="line">/usr/local/bin/upstream.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建systemd服务定时更新</span></span><br><span class="line">curl -o <span class="string">&quot;/etc/systemd/system/upstream.service&quot;</span> <span class="string">&quot;https://raw.githubusercontent.com/BigUIFU/AGH_SELF/main/DNS/upsteam.service&quot;</span></span><br><span class="line">curl -o <span class="string">&quot;/etc/systemd/system/upstream.timer&quot;</span> <span class="string">&quot;https://raw.githubusercontent.com/BigUIFU/AGH_SELF/main/DNS/upsteam.timer&quot;</span></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl <span class="built_in">enable</span> upstream.timer</span><br><span class="line">systemctl start upstream.timer</span><br><span class="line">systemctl status upstream</span><br></pre></td></tr></table></figure>
+
   </article>
   <!-- tag -->
   <div class="mt-12 pt-6 border-t border-gray-200">
+    
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/DNS/">DNS</a>
+        </span>
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/Linux/">Linux</a>
+        </span>
+      
     
   </div>
   <!-- prev and next -->
@@ -211,6 +227,11 @@
       
     </div>
     <div>
+      
+        <a href="/2023/02/16/%E4%BD%BF%E7%94%A8Hexo%E5%BB%BA%E7%AB%8B%E4%BA%86%E5%8D%9A%E5%AE%A2/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          使用Hexo建立了博客
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
       
     </div>
   </div>

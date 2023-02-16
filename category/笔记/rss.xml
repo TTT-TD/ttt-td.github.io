@@ -11,9 +11,9 @@
         <category>Linux</category>
         <category>日常</category>
         <item>
-            <guid isPermalink="true">https://ttt.td/2023/02/16/adguardhome-server-filter-china-domain</guid>
+            <guid isPermalink="true">https://ttt.td/2023/02/16/adguardhome-server-filter-china-domain.html</guid>
             <title>使用AdGuardHome搭建私有DNS并对ChinaDomain进行分流</title>
-            <link>https://ttt.td/2023/02/16/adguardhome-server-filter-china-domain</link>
+            <link>https://ttt.td/2023/02/16/adguardhome-server-filter-china-domain.html</link>
             <category>DNS</category>
             <category>Linux</category>
             <pubDate>Thu, 16 Feb 2023 15:15:27 +0800</pubDate>

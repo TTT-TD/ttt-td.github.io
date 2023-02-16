@@ -1,5 +1,5 @@
-https://ttt.td/2023/02/16/use-hexo-created-my-blog
-https://ttt.td/2023/02/16/adguardhome-server-filter-china-domain
+https://ttt.td/2023/02/16/use-hexo-created-my-blog.html
+https://ttt.td/2023/02/16/adguardhome-server-filter-china-domain.html
 https://ttt.td/tag/index.html
 https://ttt.td/category/index.html
 https://ttt.td/

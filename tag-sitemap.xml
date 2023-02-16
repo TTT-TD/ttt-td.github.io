@@ -3,22 +3,22 @@
 
 
     <url>
-        <loc>https://ttt.td/tags/%E6%97%A5%E5%B8%B8/</loc>
-        <lastmod>2023-02-16T07:20:37.120Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://ttt.td/tags/Linux/</loc>
-        <lastmod>2023-02-16T07:20:02.080Z</lastmod>
+        <lastmod>2023-02-16T07:39:49.187Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://ttt.td/tags/DNS/</loc>
-        <lastmod>2023-02-16T07:20:02.080Z</lastmod>
+        <lastmod>2023-02-16T07:39:49.187Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://ttt.td/tags/%E6%97%A5%E5%B8%B8/</loc>
+        <lastmod>2023-02-16T07:20:37.120Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

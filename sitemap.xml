@@ -4,7 +4,17 @@
 
     <sitemap>
         <loc>https://ttt.td/post-sitemap.xml</loc>
-        <lastmod>2023-02-15T11:43:56.312Z</lastmod>
+        <lastmod>2023-02-16T05:48:18.651Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://ttt.td/category-sitemap.xml</loc>
+        <lastmod>2023-02-16T05:48:18.651Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://ttt.td/tag-sitemap.xml</loc>
+        <lastmod>2023-02-16T05:48:18.651Z</lastmod>
     </sitemap>
 
 </sitemapindex>

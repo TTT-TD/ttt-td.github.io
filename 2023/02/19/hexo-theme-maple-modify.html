@@ -21,7 +21,7 @@
   <meta name="keywords" content="资源分享,一起学习,运维技巧,技术交流,好玩的开源项目">
 
 
-<title>Tag: Hexo | totheTop</title>
+<title>Hexo简约主题maple自用修改版 | totheTop</title>
 
 
 
@@ -125,7 +125,7 @@
         </h2>
       </a>
       <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
-        
+        Hexo简约主题maple自用修改版
       </div>
       <div class="flex-1"></div>
       <div class="flex items-center gap-3">
@@ -190,69 +190,115 @@
 </div>
 
   <main class="p-12">
-    
+    <!-- toc -->
 
-  <div>
-    <h2>Tag - Hexo</h2>
-  </div>
-  <section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
-  <div class="flex flex-col h-48 items-center justify-center">
-    <h1 class="site-title text-4xl leading-relaxed">
-      totheTop
-    </h1>
-    <p class="text-gray-500 mt-2">
-      生命不息，折腾不止。
-    </p>
-  </div>
-  
-  
-    
-    
-      <div class="relative pointer-events-none">
-        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold">2023</span>
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        Hexo简约主题maple自用修改版
+      </h1>
+      <p class="mb-6">
+        
+      </p>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <time>2023-02-19 01:50:38</time>
+          <span class="text-gray-400">·</span>
+          <span>1 min</span>
+          <span class="text-gray-400">·</span>
+          <span>229 words</span>
+        </section>
       </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content mt-10 prose dark:prose-invert  prose-code:text-violet-500  prose-code:before:content-[''] prose-code:after:content-['']  post-content">
+    <h2 id="Feature">Feature</h2>
+<div class="admonition info"><p class="admonition-title">原主题来源
+</p><p><a target="_blank" rel="noopener" href="https://github.com/xbmlz/hexo-theme-maple">GitHub: xbmlz/hexo-theme-maple</a></p>
+</div>
+<ul>
+<li>修改了markdown<code>`text`</code>的显示方式</li>
+<li>修复了nav部分在文章页面下header-title显示category的问题</li>
+<li>加入了<a target="_blank" rel="noopener" href="https://github.com/lxl80/hexo-admonition">hexo-admonition</a>样式，需先执行<code>npm install hexo-admonition --save</code>命令安装</li>
+</ul>
+<h2 id="安装主题">安装主题</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/hexo <span class="comment">#进入博客目录</span></span><br><span class="line">git <span class="built_in">clone</span> git@github.com:TTT-TD/hexo-theme-maple-modify.git themes/</span><br><span class="line">vim _config.yml <span class="comment">#编辑博客的配置文件</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">- theme: some-theme</span></span><br><span class="line"><span class="addition">+ theme: maple</span></span><br></pre></td></tr></table></figure>
+<h2 id="使用hexo-admonition标签">使用hexo-admonition标签</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">!!! note Hexo-admonition 插件使用示例</span><br><span class="line">    这是基于 hexo-admonition 插件渲染的一条提示信息。类型为 note，并设置了自定义标题。</span><br><span class="line"></span><br><span class="line">    提示内容开头留 4 个空格，可以有多行，最后用空行结束此标记。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="admonition note"><p class="admonition-title">这是note标签
+</p><p>这是note标签内容</p>
+</div>
+<div class="admonition info"><p class="admonition-title">这是info标签
+</p><p>这是info标签内容</p>
+</div>
+<div class="admonition warning"><p class="admonition-title">这是warning标签
+</p><p>这是warning标签内容</p>
+</div>
+<div class="admonition error"><p class="admonition-title">这是error标签
+</p><p>这是error标签内容</p>
+</div>
+<h2 id="修复的nav下header-title">修复的nav下header-title</h2>
+<p><img src="https://input-s3.mn.input.im/adm-group/1/20230219/63f10eb94ef77.png" alt=""></p>
+
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
     
-    <a href="/2023/02/19/hexo-theme-maple-modify.html">
-      <header>
-        <h2 class="font-bold text-xl">
-          Hexo简约主题maple自用修改版
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          2月 19
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
-  
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/Linux/">Linux</a>
+        </span>
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/Hexo/">Hexo</a>
+        </span>
+      
     
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      
+    </div>
+    <div>
+      
+        <a href="/2023/02/18/build-memos.html" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          二进制编译Memos开源笔记应用
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
     
-    <a href="/2023/02/17/self-hosting-giscus.html">
-      <header>
-        <h2 class="font-bold text-xl">
-          自建Giscus为Hexo添加评论功能
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          2月 17
-          ·
-          2 min
-        </p>
-      </section>
-    </a>
-  
+<script src="https://comments.ttt.td/client.js"
+        data-repo="TTT-TD/ttt-td.github.io"
+        data-repo-id="R_kgDOI-LPoA"
+        data-category="General"
+        data-category-id="DIC_kwDOI-LPoM4CUQRB"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  </div>
 </section>
-
-
 
   </main>
   <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">

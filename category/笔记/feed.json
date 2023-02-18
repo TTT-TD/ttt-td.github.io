@@ -5,6 +5,17 @@
     "home_page_url": "https://ttt.td",
     "items": [
         {
+            "id": "https://ttt.td/2023/02/19/hexo-theme-maple-modify.html",
+            "url": "https://ttt.td/2023/02/19/hexo-theme-maple-modify.html",
+            "title": "Hexo简约主题maple自用修改版",
+            "date_published": "2023-02-18T16:26:52.000Z",
+            "content_html": "<h2 id=\"Feature\">Feature</h2>\n<div class=\"admonition info\"><p class=\"admonition-title\">原主题来源\n</p><p><a href=\"https://github.com/xbmlz/hexo-theme-maple\">GitHub: xbmlz/hexo-theme-maple</a></p>\n</div>\n<ul>\n<li>修改了markdown<code>`text`</code>的显示方式</li>\n<li>修复了nav部分在文章页面下header-title显示category的问题</li>\n<li>加入了<a href=\"https://github.com/lxl80/hexo-admonition\">hexo-admonition</a>样式，需先执行<code>npm install hexo-admonition --save</code>命令安装</li>\n</ul>\n<h2 id=\"安装主题\">安装主题</h2>\n<figure class=\"highlight bash\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"built_in\">cd</span> /opt/hexo <span class=\"comment\">#进入博客目录</span></span><br><span class=\"line\">git <span class=\"built_in\">clone</span> git@github.com:TTT-TD/hexo-theme-maple-modify.git themes/</span><br><span class=\"line\">vim _config.yml <span class=\"comment\">#编辑博客的配置文件</span></span><br></pre></td></tr></table></figure>\n<figure class=\"highlight diff\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"deletion\">- theme: some-theme</span></span><br><span class=\"line\"><span class=\"addition\">+ theme: maple</span></span><br></pre></td></tr></table></figure>\n<h2 id=\"使用hexo-admonition标签\">使用hexo-admonition标签</h2>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">!!! note Hexo-admonition 插件使用示例</span><br><span class=\"line\">    这是基于 hexo-admonition 插件渲染的一条提示信息。类型为 note，并设置了自定义标题。</span><br><span class=\"line\"></span><br><span class=\"line\">    提示内容开头留 4 个空格，可以有多行，最后用空行结束此标记。</span><br><span class=\"line\"></span><br></pre></td></tr></table></figure>\n<div class=\"admonition note\"><p class=\"admonition-title\">这是note标签\n</p><p>这是note标签内容</p>\n</div>\n<div class=\"admonition info\"><p class=\"admonition-title\">这是info标签\n</p><p>这是info标签内容</p>\n</div>\n<div class=\"admonition warning\"><p class=\"admonition-title\">这是warning标签\n</p><p>这是warning标签内容</p>\n</div>\n<div class=\"admonition error\"><p class=\"admonition-title\">这是error标签\n</p><p>这是error标签内容</p>\n</div>\n<h2 id=\"修复的nav下header-title\">修复的nav下header-title</h2>\n<p><img src=\"https://input-s3.mn.input.im/adm-group/1/20230219/63f10eb94ef77.png\" alt=\"\"></p>\n",
+            "tags": [
+                "Linux",
+                "Hexo"
+            ]
+        },
+        {
             "id": "https://ttt.td/2023/02/17/self-hosting-giscus.html",
             "url": "https://ttt.td/2023/02/17/self-hosting-giscus.html",
             "title": "自建Giscus为Hexo添加评论功能",

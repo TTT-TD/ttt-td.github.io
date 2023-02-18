@@ -3,12 +3,49 @@
     <id>https://ttt.td</id>
     <title>totheTop</title>
     <link href="https://ttt.td" />
-    <updated>2023-02-18T03:12:09.000Z</updated>
+    <updated>2023-02-18T16:26:52.000Z</updated>
     <category term="DNS" />
     <category term="Linux" />
     <category term="图床" />
     <category term="Hexo" />
     <category term="日常" />
+    <entry>
+        <id>https://ttt.td/2023/02/19/hexo-theme-maple-modify.html</id>
+        <title>Hexo简约主题maple自用修改版</title>
+        <link rel="alternate" href="https://ttt.td/2023/02/19/hexo-theme-maple-modify.html"/>
+        <content type="html">&lt;h2 id=&#34;Feature&#34;&gt;Feature&lt;/h2&gt;
+&lt;div class=&#34;admonition info&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;原主题来源
+&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/xbmlz/hexo-theme-maple&#34;&gt;GitHub: xbmlz/hexo-theme-maple&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;修改了markdown&lt;code&gt;`text`&lt;/code&gt;的显示方式&lt;/li&gt;
+&lt;li&gt;修复了nav部分在文章页面下header-title显示category的问题&lt;/li&gt;
+&lt;li&gt;加入了&lt;a href=&#34;https://github.com/lxl80/hexo-admonition&#34;&gt;hexo-admonition&lt;/a&gt;样式，需先执行&lt;code&gt;npm install hexo-admonition --save&lt;/code&gt;命令安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装主题&#34;&gt;安装主题&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; /opt/hexo &lt;span class=&#34;comment&#34;&gt;#进入博客目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; git@github.com:TTT-TD/hexo-theme-maple-modify.git themes/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim _config.yml &lt;span class=&#34;comment&#34;&gt;#编辑博客的配置文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight diff&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;deletion&#34;&gt;- theme: some-theme&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;addition&#34;&gt;+ theme: maple&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;使用hexo-admonition标签&#34;&gt;使用hexo-admonition标签&lt;/h2&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;!!! note Hexo-admonition 插件使用示例&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    这是基于 hexo-admonition 插件渲染的一条提示信息。类型为 note，并设置了自定义标题。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    提示内容开头留 4 个空格，可以有多行，最后用空行结束此标记。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;div class=&#34;admonition note&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;这是note标签
+&lt;/p&gt;&lt;p&gt;这是note标签内容&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;admonition info&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;这是info标签
+&lt;/p&gt;&lt;p&gt;这是info标签内容&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;admonition warning&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;这是warning标签
+&lt;/p&gt;&lt;p&gt;这是warning标签内容&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;admonition error&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;这是error标签
+&lt;/p&gt;&lt;p&gt;这是error标签内容&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;修复的nav下header-title&#34;&gt;修复的nav下header-title&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://input-s3.mn.input.im/adm-group/1/20230219/63f10eb94ef77.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="Linux" />
+        <category term="Hexo" />
+        <updated>2023-02-18T16:26:52.000Z</updated>
+    </entry>
     <entry>
         <id>https://ttt.td/2023/02/18/build-memos.html</id>
         <title>二进制编译Memos开源笔记应用</title>

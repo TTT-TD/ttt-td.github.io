@@ -18,13 +18,9 @@
             <link>https://ttt.td/2023/02/17/free-img-hosting.html</link>
             <category>图床</category>
             <pubDate>Fri, 17 Feb 2023 03:15:07 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;嗯。。。&#34;&gt;嗯。。。&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://input-s3.mn.input.im/adm-group/1/20230217/63ee82a746758.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;https://input-s3.mn.input.im/adm-group/1/20230216/63edbca43cf16.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;食用方法&#34;&gt;食用方法&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;地址：&lt;/strong&gt; &lt;a href=&#34;https://input.im&#34;&gt;https://input.im&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
-&lt;ul&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;嗯。。。&#34;&gt;&lt;a href=&#34;#嗯。。。&#34; class=&#34;headerlink&#34; title=&#34;嗯。。。&#34;&gt;&lt;/a&gt;嗯。。。&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://input-s3.mn.input.im/adm-group/1/20230217/63ee82a746758.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://input-s3.mn.input.im/adm-group/1/20230216/63edbca43cf16.webp&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;食用方法&#34;&gt;&lt;a href=&#34;#食用方法&#34; class=&#34;headerlink&#34; title=&#34;食用方法&#34;&gt;&lt;/a&gt;食用方法&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;地址：&lt;/strong&gt; &lt;a href=&#34;https://input.im/&#34;&gt;https://input.im&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;概要&#34;&gt;&lt;a href=&#34;#概要&#34; class=&#34;headerlink&#34; title=&#34;概要&#34;&gt;&lt;/a&gt;概要&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;使用Lsky-Pro程序搭建&lt;/li&gt;
 &lt;li&gt;使用了Cloudflare R2存储&lt;/li&gt;
 &lt;li&gt;使用了Backblaze B2存储&lt;/li&gt;
@@ -33,8 +29,7 @@
 &lt;li&gt;利用闲置的机器自建了一套CDN服务(使用中)&lt;/li&gt;
 &lt;li&gt;自建了NsfwJS的图片审核服务(上传可能会有点慢)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;使用条款&#34;&gt;使用条款&lt;/h2&gt;
-&lt;ul&gt;
+&lt;h2 id=&#34;使用条款&#34;&gt;&lt;a href=&#34;#使用条款&#34; class=&#34;headerlink&#34; title=&#34;使用条款&#34;&gt;&lt;/a&gt;使用条款&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;为避免滥用，游客身份有部分限制&lt;/li&gt;
 &lt;li&gt;注册免费用户基本没有什么限制(一天传200张，差不多够了吧)&lt;/li&gt;
 &lt;li&gt;严禁上传违法违规内容&lt;/li&gt;

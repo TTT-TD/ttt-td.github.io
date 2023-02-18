@@ -218,13 +218,10 @@
     </div>
   </header>
   <!-- content -->
-  <article class="post-content mt-10 prose dark:prose-invert  prose-code:text-violet-500  prose-code:before:content-[''] prose-code:after:content-['']  post-content">
-    <h2 id="先决条件">先决条件</h2>
-<p>安装好AdGuardHome后，编辑<code>AdGuardHome.yaml</code>设置<code>upstream_dns_file = &quot;/usr/share/adguardhome.upstream&quot;</code>，设置<code>all_servers = true</code>，设置<code>cache_optimistic = true</code></p>
-<h2 id="预览">预览</h2>
-<p><img src="https://input-s3.mn.input.im/adm-group/1/20230216/63edd8a26bc44.png" alt=""></p>
-<h2 id="分流规则">分流规则</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装脚本</span></span><br><span class="line">curl -o <span class="string">&quot;/usr/local/bin/upstream.sh&quot;</span> <span class="string">&quot;https://raw.githubusercontent.com/TTT-TD/AGH_SELF/main/DNS/upsteam.sh&quot;</span></span><br><span class="line"><span class="built_in">chmod</span> +x /usr/local/bin/upstream.sh</span><br><span class="line">/usr/local/bin/upstream.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建systemd服务定时更新</span></span><br><span class="line">curl -o <span class="string">&quot;/etc/systemd/system/upstream.service&quot;</span> <span class="string">&quot;https://raw.githubusercontent.com/TTT-TD/AGH_SELF/main/DNS/upsteam.service&quot;</span></span><br><span class="line">curl -o <span class="string">&quot;/etc/systemd/system/upstream.timer&quot;</span> <span class="string">&quot;https://raw.githubusercontent.com/TTT-TD/AGH_SELF/main/DNS/upsteam.timer&quot;</span></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl <span class="built_in">enable</span> upstream.timer</span><br><span class="line">systemctl start upstream.timer</span><br><span class="line">systemctl status upstream</span><br></pre></td></tr></table></figure>
+  <article class="post-content mt-10 prose dark:prose-invert post-content">
+    <h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><p>安装好AdGuardHome后，编辑<code>AdGuardHome.yaml</code>设置<code>upstream_dns_file = &quot;/usr/share/adguardhome.upstream&quot;</code>，设置<code>all_servers = true</code>，设置<code>cache_optimistic = true</code></p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://input-s3.mn.input.im/adm-group/1/20230216/63edd8a26bc44.png"></p>
+<h2 id="分流规则"><a href="#分流规则" class="headerlink" title="分流规则"></a>分流规则</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装脚本</span></span><br><span class="line">curl -o <span class="string">&quot;/usr/local/bin/upstream.sh&quot;</span> <span class="string">&quot;https://raw.githubusercontent.com/TTT-TD/AGH_SELF/main/DNS/upsteam.sh&quot;</span></span><br><span class="line"><span class="built_in">chmod</span> +x /usr/local/bin/upstream.sh</span><br><span class="line">/usr/local/bin/upstream.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建systemd服务定时更新</span></span><br><span class="line">curl -o <span class="string">&quot;/etc/systemd/system/upstream.service&quot;</span> <span class="string">&quot;https://raw.githubusercontent.com/TTT-TD/AGH_SELF/main/DNS/upsteam.service&quot;</span></span><br><span class="line">curl -o <span class="string">&quot;/etc/systemd/system/upstream.timer&quot;</span> <span class="string">&quot;https://raw.githubusercontent.com/TTT-TD/AGH_SELF/main/DNS/upsteam.timer&quot;</span></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl <span class="built_in">enable</span> upstream.timer</span><br><span class="line">systemctl start upstream.timer</span><br><span class="line">systemctl status upstream</span><br></pre></td></tr></table></figure>
 
   </article>
   <!-- tag -->
@@ -282,7 +279,6 @@
 
   </div>
 </section>
-
   </main>
   <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
   <!-- busuanzi -->
@@ -376,7 +372,7 @@
       $(this).find('img').each(function(){
         if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
         var alt = this.alt;
-        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        if (alt) $(this).after('<span class="fancybox-alt hidden">' + alt + '</span>');
         $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
       });
       $(this).find('.fancybox').each(function(){

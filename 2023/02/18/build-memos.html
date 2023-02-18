@@ -208,36 +208,29 @@
       </p>
       <div>
         <section class="flex items-center gap-3 text-sm">
-          <time>2023-02-19 01:51:19</time>
+          <time>2023-02-19 02:08:19</time>
           <span class="text-gray-400">·</span>
           <span>1 min</span>
           <span class="text-gray-400">·</span>
-          <span>395 words</span>
+          <span>392 words</span>
         </section>
       </div>
     </div>
   </header>
   <!-- content -->
-  <article class="post-content mt-10 prose dark:prose-invert  prose-code:text-violet-500  prose-code:before:content-[''] prose-code:after:content-['']  post-content">
-    <h2 id="应用介绍">应用介绍</h2>
-<blockquote>
+  <article class="post-content mt-10 prose dark:prose-invert post-content">
+    <h2 id="应用介绍"><a href="#应用介绍" class="headerlink" title="应用介绍"></a>应用介绍</h2><blockquote>
 <p>一个轻量级的自托管备忘录。  开源且永远免费。</p>
 </blockquote>
-<p><img src="https://input-s3.mn.input.im/adm-group/1/20230218/63f04326eb92e.png" alt=""></p>
-<h2 id="官方">官方</h2>
-<p>Home: <a target="_blank" rel="noopener" href="https://usememos.com">https://usememos.com</a><br>
-Demo: <a target="_blank" rel="noopener" href="https://demo.usememos.com">https://demo.usememos.com</a><br>
-GitHub: <a target="_blank" rel="noopener" href="https://github.com/usememos/memos">https://github.com/usememos/memos</a></p>
-<h2 id="为什么自编译二进制">为什么自编译二进制</h2>
-<p><strong>因为玩不来Docker</strong></p>
-<h2 id="编译方法">编译方法</h2>
-<p>需要<code>go</code>、<code>yarn</code>环境，不再阐述安装方法</p>
+<p><img src="https://input-s3.mn.input.im/adm-group/1/20230218/63f04326eb92e.png" alt="memos.png"></p>
+<h2 id="官方"><a href="#官方" class="headerlink" title="官方"></a>官方</h2><p>Home: <a target="_blank" rel="noopener" href="https://usememos.com/">https://usememos.com</a><br>Demo: <a target="_blank" rel="noopener" href="https://demo.usememos.com/">https://demo.usememos.com</a><br>GitHub: <a target="_blank" rel="noopener" href="https://github.com/usememos/memos">https://github.com/usememos/memos</a></p>
+<h2 id="为什么自编译二进制"><a href="#为什么自编译二进制" class="headerlink" title="为什么自编译二进制"></a>为什么自编译二进制</h2><p><strong>因为玩不来Docker</strong></p>
+<h2 id="编译方法"><a href="#编译方法" class="headerlink" title="编译方法"></a>编译方法</h2><p>需要<code>go</code>、<code>yarn</code>环境，不再阐述安装方法</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /var/opt/memos <span class="comment">#创建运行目录</span></span><br><span class="line">git <span class="built_in">clone</span> -b release/xxx https://github.com/usememos/memos.git <span class="comment">#release/xxx换成当前需要编译的版本号</span></span><br><span class="line"><span class="built_in">cd</span> memos <span class="comment">#进入源码目录</span></span><br><span class="line"><span class="built_in">cd</span> web <span class="comment">#进入前端目录，可以自行替换logo.png等</span></span><br><span class="line">yarn &amp;&amp; yarn build <span class="comment">#编译前端文件，会在当前目录(web/)下生成dist文件夹</span></span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line"><span class="built_in">rm</span> -rf server/dist/ &amp;&amp; <span class="built_in">mv</span> web/dist/ server/ <span class="comment">#将编译好的前端静态资源放入后端目录等会一块编译</span></span><br><span class="line">go build -o /var/opt/memos/memos bin/server/main.go <span class="comment">#编译二进制文件并放入运行目录</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>至此，二进制文件已经编译完成</p>
-<h2 id="Supervisor配置">Supervisor配置</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">apt install -y supervisor <span class="comment">#安装supervisor，Redhat系换yum</span></span><br><span class="line"><span class="built_in">touch</span> /etc/supervisor/conf.d/memos.conf <span class="comment">#创建配置文件</span></span><br><span class="line"><span class="built_in">mkdir</span> -p /var/log/memos <span class="comment">#创建日志存储目录</span></span><br><span class="line">vim /etc/supervisor/conf.d/memos.conf <span class="comment">#编辑配置文件，输入以下内容</span></span><br><span class="line"></span><br><span class="line">[program: memos]</span><br><span class="line"><span class="built_in">command</span>=/var/opt/memos/memos -mode prod -port 12345</span><br><span class="line">directory=/var/opt/memos</span><br><span class="line">autorestart=<span class="literal">true</span></span><br><span class="line">autostart=<span class="literal">true</span></span><br><span class="line">stderr_logfile=/var/log/memos/memos.err.log</span><br><span class="line">stderr_logfile_maxbytes=10KB</span><br><span class="line">stdout_logfile=/var/log/memos/memos.out.log</span><br><span class="line">stdout_logfile_maxbytes=10KB</span><br><span class="line">user=root</span><br><span class="line">startsecs=1</span><br><span class="line"></span><br><span class="line"><span class="comment">#以上-port 12345改成自己指定端口</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">chmod</span> u+x /var/opt/memos/memos <span class="comment">#赋予可执行权限</span></span><br><span class="line">supervisorctl reread <span class="comment">#读取配置</span></span><br><span class="line">supervisorctl reload <span class="comment">#重载配置</span></span><br><span class="line">supervisorctl update <span class="comment">#更新配置</span></span><br><span class="line">supervisorctl start memos <span class="comment">#启动应用</span></span><br><span class="line">systemctl <span class="built_in">enable</span> supervisor <span class="comment">#将Supervisor加入开机启动</span></span><br></pre></td></tr></table></figure>
-<h2 id="完成">完成</h2>
-<p>创建反向代理指向IP:PORT即可完成部署</p>
+<h2 id="Supervisor配置"><a href="#Supervisor配置" class="headerlink" title="Supervisor配置"></a>Supervisor配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">apt install -y supervisor <span class="comment">#安装supervisor，Redhat系换yum</span></span><br><span class="line"><span class="built_in">touch</span> /etc/supervisor/conf.d/memos.conf <span class="comment">#创建配置文件</span></span><br><span class="line"><span class="built_in">mkdir</span> -p /var/log/memos <span class="comment">#创建日志存储目录</span></span><br><span class="line">vim /etc/supervisor/conf.d/memos.conf <span class="comment">#编辑配置文件，输入以下内容</span></span><br><span class="line"></span><br><span class="line">[program: memos]</span><br><span class="line"><span class="built_in">command</span>=/var/opt/memos/memos -mode prod -port 12345</span><br><span class="line">directory=/var/opt/memos</span><br><span class="line">autorestart=<span class="literal">true</span></span><br><span class="line">autostart=<span class="literal">true</span></span><br><span class="line">stderr_logfile=/var/log/memos/memos.err.log</span><br><span class="line">stderr_logfile_maxbytes=10KB</span><br><span class="line">stdout_logfile=/var/log/memos/memos.out.log</span><br><span class="line">stdout_logfile_maxbytes=10KB</span><br><span class="line">user=root</span><br><span class="line">startsecs=1</span><br><span class="line"></span><br><span class="line"><span class="comment">#以上-port 12345改成自己指定端口</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">chmod</span> u+x /var/opt/memos/memos <span class="comment">#赋予可执行权限</span></span><br><span class="line">supervisorctl reread <span class="comment">#读取配置</span></span><br><span class="line">supervisorctl reload <span class="comment">#重载配置</span></span><br><span class="line">supervisorctl update <span class="comment">#更新配置</span></span><br><span class="line">supervisorctl start memos <span class="comment">#启动应用</span></span><br><span class="line">systemctl <span class="built_in">enable</span> supervisor <span class="comment">#将Supervisor加入开机启动</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>创建反向代理指向IP:PORT即可完成部署</p>
 
   </article>
   <!-- tag -->
@@ -291,7 +284,6 @@ GitHub: <a target="_blank" rel="noopener" href="https://github.com/usememos/memo
 
   </div>
 </section>
-
   </main>
   <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
   <!-- busuanzi -->
@@ -385,7 +377,7 @@ GitHub: <a target="_blank" rel="noopener" href="https://github.com/usememos/memo
       $(this).find('img').each(function(){
         if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
         var alt = this.alt;
-        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        if (alt) $(this).after('<span class="fancybox-alt hidden">' + alt + '</span>');
         $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
       });
       $(this).find('.fancybox').each(function(){

@@ -118,15 +118,14 @@ a:hover {
   margin: 1.5625em 0;
   padding: 0.6rem;
   overflow: hidden;
-  font-size: 0.64rem;
   page-break-inside: avoid;
   border-left: 0.3rem solid #42b983;
   border-radius: 0.3rem;
   box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.05), 0 0 0.05rem rgba(0,0,0,0.1);
-  background-color: #fafafa;
 }
 p.admonition-title {
   position: relative;
+  height: 100%;
   margin: -0.6rem -0.6rem 0.8em -0.6rem !important;
   padding: 0.4rem 0.6rem 0.4rem 2.5rem;
   font-weight: 700;
@@ -144,33 +143,41 @@ p.admonition-title {
 }
 .info>.admonition-title,
 .todo>.admonition-title {
-  background-color: rgba(0,184,212,0.1);
+  background-color: rgba(0,184,212,0.2);
+  color: #00b8d4;
 }
 .warning>.admonition-title,
 .attention>.admonition-title,
 .caution>.admonition-title {
-  background-color: rgba(255,145,0,0.1);
+  background-color: rgba(255,145,0,0.2);
 }
 .failure>.admonition-title,
 .missing>.admonition-title,
 .fail>.admonition-title,
 .error>.admonition-title {
-  background-color: rgba(255,82,82,0.1);
+  background-color: rgba(255,82,82,0.2);
 }
 .admonition.info,
 .admonition.todo {
   border-color: #00b8d4;
+  color: #00b8d4;
+}
+.admonition.note {
+  border-color: #42b983;
+  color: #42b983;
 }
 .admonition.warning,
 .admonition.attention,
 .admonition.caution {
   border-color: #ff9100;
+  color: #ff9100;
 }
 .admonition.failure,
 .admonition.missing,
 .admonition.fail,
 .admonition.error {
   border-color: #ff5252;
+  color: #ff5252;
 }
 .info>.admonition-title::before,
 .todo>.admonition-title::before {

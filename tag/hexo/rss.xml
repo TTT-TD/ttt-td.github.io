@@ -20,7 +20,9 @@
             <category>Hexo</category>
             <pubDate>Sun, 19 Feb 2023 00:26:52 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;Feature&#34;&gt;&lt;a href=&#34;#Feature&#34; class=&#34;headerlink&#34; title=&#34;Feature&#34;&gt;&lt;/a&gt;Feature&lt;/h2&gt;&lt;div class=&#34;admonition info&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;原主题来源
-&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/xbmlz/hexo-theme-maple&#34;&gt;GitHub: xbmlz/hexo-theme-maple&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/xbmlz/hexo-theme-maple&#34;&gt;GitHub: xbmlz/hexo-theme-maple&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 
 &lt;ul&gt;
@@ -93,7 +95,7 @@
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yarn install&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yarn build&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yarn start&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;目前已经运行在&lt;code&gt;0.0.0.0:3000&lt;/code&gt;了&lt;/p&gt;
 &lt;h2 id=&#34;使用PM2配置进程守护&#34;&gt;&lt;a href=&#34;#使用PM2配置进程守护&#34; class=&#34;headerlink&#34; title=&#34;使用PM2配置进程守护&#34;&gt;&lt;/a&gt;使用PM2配置进程守护&lt;/h2&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install -g pm2 &lt;span class=&#34;comment&#34;&gt;#安装pm2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; /opt/giscus &lt;span class=&#34;comment&#34;&gt;#进入运行目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pm2 start yarn -n giscus -- start &lt;span class=&#34;comment&#34;&gt;#使用pm2启动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pm2 save &lt;span class=&#34;comment&#34;&gt;#保存配置&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pm2 startup &lt;span class=&#34;comment&#34;&gt;#添加开机启动并注册系统服务&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img src=&#34;https://input-s3.mn.input.im/adm-group/1/20230217/63ee9bc2d107c.png&#34;&gt;&lt;br&gt;如图所示启动成功&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://input-s3.mn.input.im/adm-group/1/20230217/63ee9bc2d107c.png&#34; alt=&#34;pm2进程守护&#34;&gt;&lt;br&gt;如图所示启动成功&lt;/p&gt;
 &lt;h2 id=&#34;配置反向代理&#34;&gt;&lt;a href=&#34;#配置反向代理&#34; class=&#34;headerlink&#34; title=&#34;配置反向代理&#34;&gt;&lt;/a&gt;配置反向代理&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;不码字了，用开始准备的域名反代指向IP:3000即可&lt;/strong&gt;&lt;/p&gt;
  ]]></description>
         </item>

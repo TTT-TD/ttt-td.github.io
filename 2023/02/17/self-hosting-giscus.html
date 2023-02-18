@@ -208,7 +208,7 @@
       </p>
       <div>
         <section class="flex items-center gap-3 text-sm">
-          <time>2023-02-17 05:54:16</time>
+          <time>2023-02-19 04:48:29</time>
           <span class="text-gray-400">·</span>
           <span>2 min</span>
           <span class="text-gray-400">·</span>
@@ -249,7 +249,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn install</span><br><span class="line">yarn build</span><br><span class="line">yarn start</span><br></pre></td></tr></table></figure>
 <p>目前已经运行在<code>0.0.0.0:3000</code>了</p>
 <h2 id="使用PM2配置进程守护"><a href="#使用PM2配置进程守护" class="headerlink" title="使用PM2配置进程守护"></a>使用PM2配置进程守护</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install -g pm2 <span class="comment">#安装pm2</span></span><br><span class="line"><span class="built_in">cd</span> /opt/giscus <span class="comment">#进入运行目录</span></span><br><span class="line">pm2 start yarn -n giscus -- start <span class="comment">#使用pm2启动</span></span><br><span class="line">pm2 save <span class="comment">#保存配置</span></span><br><span class="line">pm2 startup <span class="comment">#添加开机启动并注册系统服务</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://input-s3.mn.input.im/adm-group/1/20230217/63ee9bc2d107c.png"><br>如图所示启动成功</p>
+<p><img src="https://input-s3.mn.input.im/adm-group/1/20230217/63ee9bc2d107c.png" alt="pm2进程守护"><br>如图所示启动成功</p>
 <h2 id="配置反向代理"><a href="#配置反向代理" class="headerlink" title="配置反向代理"></a>配置反向代理</h2><p><strong>不码字了，用开始准备的域名反代指向IP:3000即可</strong></p>
 
   </article>

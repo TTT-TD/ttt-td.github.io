@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ttt.td/2023/02/18/build-memos.html</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ttt.td/category/index.html</loc>
     
     <lastmod>2023-02-18</lastmod>
@@ -109,14 +118,14 @@
   </url>
   
   <url>
-    <loc>https://ttt.td/category/%E8%B5%84%E6%BA%90/</loc>
+    <loc>https://ttt.td/category/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2023-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ttt.td/category/%E6%97%A5%E5%B8%B8/</loc>
+    <loc>https://ttt.td/category/%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2023-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

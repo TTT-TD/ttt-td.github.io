@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>totheTop • Posts by &#34;日常&#34; tag</title>
+        <title>totheTop • Posts by &#34;ide&#34; tag</title>
         <link>https://ttt.td</link>
         <description>折腾各种好玩的东西并分享出来</description>
         <language>zh-cn</language>
@@ -46,15 +46,6 @@
 
 &lt;p&gt;重新启动编辑器，已经可以连接&lt;br&gt;&lt;img src=&#34;https://input-s3.mn.input.im/adm-group/1/20230220/63f2b0be54c4a.png&#34; alt=&#34;连接服务器.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://input-s3.mn.input.im/adm-group/1/20230220/63f2b0ee4d548.png&#34; alt=&#34;管理服务器文件.png&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://ttt.td/2023/02/16/undefined.html</guid>
-            <title>使用Hexo建立了博客</title>
-            <link>https://ttt.td/2023/02/16/undefined.html</link>
-            <category>日常</category>
-            <pubDate>Thu, 16 Feb 2023 14:22:27 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;2023——博客换到Hexo——ToTheTop&#34;&gt;&lt;a href=&#34;#2023——博客换到Hexo——ToTheTop&#34; class=&#34;headerlink&#34; title=&#34;2023——博客换到Hexo——ToTheTop&#34;&gt;&lt;/a&gt;2023——博客换到Hexo——ToTheTop&lt;/h1&gt;&lt;p&gt;用了两年多的Typecho目前先停下啦&lt;br&gt;尝尝鲜用Hexo玩玩&lt;br&gt;刚好前天收了个域名&lt;code&gt;ttt.td&lt;/code&gt;刚好用上试试&lt;br&gt;加油！&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

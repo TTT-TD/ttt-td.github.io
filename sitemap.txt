@@ -1,3 +1,4 @@
+https://ttt.td/2023/02/20/vscode-use-sshfs.html
 https://ttt.td/2023/02/16/build-dns-filter-cn.html
 https://ttt.td/2023/02/17/self-hosting-giscus.html
 https://ttt.td/2023/02/19/hexo-theme-maple-modify.html
@@ -12,6 +13,9 @@ https://ttt.td/tags/Linux/
 https://ttt.td/tags/%E5%9B%BE%E5%BA%8A/
 https://ttt.td/tags/Hexo/
 https://ttt.td/tags/%E6%97%A5%E5%B8%B8/
+https://ttt.td/tags/IDE/
+https://ttt.td/tags/%E7%BC%96%E8%BE%91%E5%99%A8/
+https://ttt.td/tags/vscode/
 https://ttt.td/category/%E7%AC%94%E8%AE%B0/
 https://ttt.td/category/%E6%97%A5%E5%B8%B8/
 https://ttt.td/category/%E8%B5%84%E6%BA%90/

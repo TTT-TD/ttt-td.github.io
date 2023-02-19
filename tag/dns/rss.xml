@@ -12,6 +12,9 @@
         <category>图床</category>
         <category>Hexo</category>
         <category>日常</category>
+        <category>IDE</category>
+        <category>编辑器</category>
+        <category>vscode</category>
         <item>
             <guid isPermalink="true">https://ttt.td/2023/02/16/build-dns-filter-cn.html</guid>
             <title>使用AdGuardHome搭建私有DNS并对ChinaDomain进行分流</title>

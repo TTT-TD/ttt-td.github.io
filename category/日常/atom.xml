@@ -9,6 +9,9 @@
     <category term="图床" />
     <category term="Hexo" />
     <category term="日常" />
+    <category term="IDE" />
+    <category term="编辑器" />
+    <category term="vscode" />
     <entry>
         <id>https://ttt.td/2023/02/18/build-memos.html</id>
         <title>二进制编译Memos开源笔记应用</title>

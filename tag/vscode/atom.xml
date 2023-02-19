@@ -1,30 +1,22 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>totheTop • Posts by &#34;日常&#34; tag</title>
-        <link>https://ttt.td</link>
-        <description>折腾各种好玩的东西并分享出来</description>
-        <language>zh-cn</language>
-        <pubDate>Mon, 20 Feb 2023 07:04:00 +0800</pubDate>
-        <lastBuildDate>Mon, 20 Feb 2023 07:04:00 +0800</lastBuildDate>
-        <category>DNS</category>
-        <category>Linux</category>
-        <category>图床</category>
-        <category>Hexo</category>
-        <category>日常</category>
-        <category>IDE</category>
-        <category>编辑器</category>
-        <category>vscode</category>
-        <item>
-            <guid isPermalink="true">https://ttt.td/2023/02/20/vscode-use-sshfs.html</guid>
-            <title>VSCode使用SSH FS插件实现远程管理</title>
-            <link>https://ttt.td/2023/02/20/vscode-use-sshfs.html</link>
-            <category>日常</category>
-            <category>IDE</category>
-            <category>编辑器</category>
-            <category>vscode</category>
-            <pubDate>Mon, 20 Feb 2023 07:04:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;它是全能的&#34;&gt;&lt;a href=&#34;#它是全能的&#34; class=&#34;headerlink&#34; title=&#34;它是全能的&#34;&gt;&lt;/a&gt;它是全能的&lt;/h2&gt;&lt;div class=&#34;admonition info&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;我的使用场景
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ttt.td</id>
+    <title>totheTop • Posts by &#34;vscode&#34; tag</title>
+    <link href="https://ttt.td" />
+    <updated>2023-02-19T23:04:00.000Z</updated>
+    <category term="DNS" />
+    <category term="Linux" />
+    <category term="图床" />
+    <category term="Hexo" />
+    <category term="日常" />
+    <category term="IDE" />
+    <category term="编辑器" />
+    <category term="vscode" />
+    <entry>
+        <id>https://ttt.td/2023/02/20/vscode-use-sshfs.html</id>
+        <title>VSCode使用SSH FS插件实现远程管理</title>
+        <link rel="alternate" href="https://ttt.td/2023/02/20/vscode-use-sshfs.html"/>
+        <content type="html">&lt;h2 id=&#34;它是全能的&#34;&gt;&lt;a href=&#34;#它是全能的&#34; class=&#34;headerlink&#34; title=&#34;它是全能的&#34;&gt;&lt;/a&gt;它是全能的&lt;/h2&gt;&lt;div class=&#34;admonition info&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;我的使用场景
 &lt;/p&gt;&lt;p&gt;这不是博客迁到了Hexo上了嘛，由于hexo程序在我服务器上，我上网环境比较多变，之前做了VSCode的功课可以使用Remote-SSH插件实现远程管理，但是用了下发现那种ssh key登录的方式只是适合自己固定的设备上使用&lt;/p&gt;
 &lt;p&gt;既要考虑便携性又要方便的话(支持密码验证)，找了一下可以使用&lt;code&gt;SSH FS&lt;/code&gt;扩展&lt;/p&gt;
 &lt;/div&gt;
@@ -46,16 +38,11 @@
 
 &lt;p&gt;重新启动编辑器，已经可以连接&lt;br&gt;&lt;img src=&#34;https://input-s3.mn.input.im/adm-group/1/20230220/63f2b0be54c4a.png&#34; alt=&#34;连接服务器.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://input-s3.mn.input.im/adm-group/1/20230220/63f2b0ee4d548.png&#34; alt=&#34;管理服务器文件.png&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://ttt.td/2023/02/16/undefined.html</guid>
-            <title>使用Hexo建立了博客</title>
-            <link>https://ttt.td/2023/02/16/undefined.html</link>
-            <category>日常</category>
-            <pubDate>Thu, 16 Feb 2023 14:22:27 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;2023——博客换到Hexo——ToTheTop&#34;&gt;&lt;a href=&#34;#2023——博客换到Hexo——ToTheTop&#34; class=&#34;headerlink&#34; title=&#34;2023——博客换到Hexo——ToTheTop&#34;&gt;&lt;/a&gt;2023——博客换到Hexo——ToTheTop&lt;/h1&gt;&lt;p&gt;用了两年多的Typecho目前先停下啦&lt;br&gt;尝尝鲜用Hexo玩玩&lt;br&gt;刚好前天收了个域名&lt;code&gt;ttt.td&lt;/code&gt;刚好用上试试&lt;br&gt;加油！&lt;/p&gt;
- ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <category term="日常" />
+        <category term="IDE" />
+        <category term="编辑器" />
+        <category term="vscode" />
+        <updated>2023-02-19T23:04:00.000Z</updated>
+    </entry>
+</feed>

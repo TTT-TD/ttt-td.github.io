@@ -21,7 +21,7 @@
   <meta name="keywords" content="资源分享,一起学习,运维技巧,技术交流,好玩的开源项目">
 
 
-<title>Tag: Linux | totheTop</title>
+<title>VSCode使用SSH FS插件实现远程管理 | totheTop</title>
 
 
 
@@ -125,7 +125,7 @@
         </h2>
       </a>
       <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
-        
+        VSCode使用SSH FS插件实现远程管理
       </div>
       <div class="flex-1"></div>
       <div class="flex items-center gap-3">
@@ -186,110 +186,117 @@
 </div>
 
   <main class="p-12">
-    
+    <!-- toc -->
 
-  <div>
-    <h2>Tag - Linux</h2>
-  </div>
-  <section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
-  <div class="flex flex-col h-48 items-center justify-center">
-    <h1 class="site-title text-4xl leading-relaxed">
-      totheTop
-    </h1>
-    <p class="text-gray-500 mt-2">
-      生命不息，折腾不止。
-    </p>
-  </div>
-  
-  
-    
-    
-      <div class="relative pointer-events-none">
-        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold">2023</span>
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        VSCode使用SSH FS插件实现远程管理
+      </h1>
+      <p class="mb-6">
+        
+      </p>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <time>2023-02-20 07:33:54</time>
+          <span class="text-gray-400">·</span>
+          <span>1 min</span>
+          <span class="text-gray-400">·</span>
+          <span>379 words</span>
+        </section>
       </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content mt-10 prose prose-code:text-cyan-500 prose-code:before:content-[''] prose-code:after:content-[''] dark:prose-invert post-content">
+    <h2 id="它是全能的"><a href="#它是全能的" class="headerlink" title="它是全能的"></a>它是全能的</h2><div class="admonition info"><p class="admonition-title">我的使用场景
+</p><p>这不是博客迁到了Hexo上了嘛，由于hexo程序在我服务器上，我上网环境比较多变，之前做了VSCode的功课可以使用Remote-SSH插件实现远程管理，但是用了下发现那种ssh key登录的方式只是适合自己固定的设备上使用</p>
+<p>既要考虑便携性又要方便的话(支持密码验证)，找了一下可以使用<code>SSH FS</code>扩展</p>
+</div>
+
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>由于我需要使用便携版，所以我下载的portable版本的vscode</p>
+<div class="admonition warning"><p class="admonition-title">关于制作便携版
+</p><p>portable版本虽然是zip格式，但是解压后需要在软件目录新建data目录重新运行才能使便携版，新建data目录之后再进行打包</p>
+</div>
+
+<p>打开VSCode，进入扩展页面，快捷键<code>Ctrl+Shift+X</code></p>
+<p>搜索<code>SSH FS</code>并安装</p>
+<p><img src="https://input-s3.mn.input.im/adm-group/1/20230220/63f2afb4afc21.png" alt="VSCode的SSH FS扩展.png"></p>
+<p>安装之后打开扩展设置<code>config.json</code>，更改以下配置为自己的信息</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;sshfs.configs&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        </span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;root&quot;</span><span class="punctuation">:</span> <span class="string">&quot;远程根目录&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;host&quot;</span><span class="punctuation">:</span> <span class="string">&quot;服务器IP&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;port&quot;</span><span class="punctuation">:</span> <span class="number">22</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;username&quot;</span><span class="punctuation">:</span> <span class="string">&quot;root&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;password&quot;</span><span class="punctuation">:</span> <span class="string">&quot;密码&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;连接名称&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;merge&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;sftpSudo&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="attr">&quot;sshfs.flags&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;-FS_NOTIFY_ERRORS&quot;</span> <span class="comment">//这个很重要，避免报build.grade错误</span></span><br><span class="line">    </span><br><span class="line">    <span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<div class="admonition error"><p class="admonition-title">安全建议
+</p><p>如果使用密码认证方式，不信任的设备上使用便携版需要妥善存储，例如加密打包</p>
+</div>
+
+<p>重新启动编辑器，已经可以连接<br><img src="https://input-s3.mn.input.im/adm-group/1/20230220/63f2b0be54c4a.png" alt="连接服务器.png"></p>
+<p><img src="https://input-s3.mn.input.im/adm-group/1/20230220/63f2b0ee4d548.png" alt="管理服务器文件.png"></p>
+
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
     
-    <a href="/2023/02/19/hexo-theme-maple-modify.html">
-      <header>
-        <h2 class="font-bold text-xl">
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/%E6%97%A5%E5%B8%B8/">日常</a>
+        </span>
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/IDE/">IDE</a>
+        </span>
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/">编辑器</a>
+        </span>
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/vscode/">vscode</a>
+        </span>
+      
+    
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      
+    </div>
+    <div>
+      
+        <a href="/2023/02/19/hexo-theme-maple-modify.html" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
           Hexo简约主题maple自用修改版
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          2月 19
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
-  
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
     
-    
-    <a href="/2023/02/18/build-memos.html">
-      <header>
-        <h2 class="font-bold text-xl">
-          二进制编译Memos开源笔记应用
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          2月 18
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2023/02/17/self-hosting-giscus.html">
-      <header>
-        <h2 class="font-bold text-xl">
-          自建Giscus为Hexo添加评论功能
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          2月 17
-          ·
-          2 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2023/02/16/build-dns-filter-cn.html">
-      <header>
-        <h2 class="font-bold text-xl">
-          使用AdGuardHome搭建私有DNS并对ChinaDomain进行分流
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          2月 16
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
-  
+<script src="https://comments.ttt.td/client.js"
+        data-repo="TTT-TD/ttt-td.github.io"
+        data-repo-id="R_kgDOI-LPoA"
+        data-category="General"
+        data-category-id="DIC_kwDOI-LPoM4CUQRB"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  </div>
 </section>
-
-
-
   </main>
   <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
   <!-- busuanzi -->

@@ -6,7 +6,7 @@
   <link href="https://ttt.td/atom.xml" rel="self"/>
   
   <link href="https://ttt.td/"/>
-  <updated>2023-02-28T15:51:39.670Z</updated>
+  <updated>2023-02-28T16:44:32.470Z</updated>
   <id>https://ttt.td/</id>
   
   <author>
@@ -17,15 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>create-own-im-app</title>
-    <link href="https://ttt.td/2023/02/28/null.html"/>
-    <id>https://ttt.td/2023/02/28/null.html</id>
+    <title>创建一个自己的即时聊天应用——VoceChat</title>
+    <link href="https://ttt.td/2023/02/28/create-own-im-app.html"/>
+    <id>https://ttt.td/2023/02/28/create-own-im-app.html</id>
     <published>2023-02-28T15:51:39.000Z</published>
-    <updated>2023-02-28T15:51:39.670Z</updated>
+    <updated>2023-02-28T16:44:32.470Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="它是什么"><a href="#它是什么" class="headerlink" title="它是什么"></a>它是什么</h2><p>它叫<a href="https://voce.chat/">VoceChat</a>！简单点说，它是一款(半?)开源的、可自部署的即时通讯类应用</p><h2 id="它能存在的意义"><a href="#它能存在的意义" class="headerlink" title="它能存在的意义"></a>它能存在的意义</h2><p>作为一款私有化可自部署的即时通讯类应用，我认为它被开发出来的初衷或许是为了让爱好者们可以拥有一个纯粹的沟通平台，它具备数据私有化、部署<del>傻瓜化</del>、维护自动化、玩法功能多元化等特点。它不像微信QQ那么臃肿、不像Telegram和Discord那样在中国有一定的使用门槛；它是很纯粹很干净的一款聊天应用！</p><h2 id="如果拥有它"><a href="#如果拥有它" class="headerlink" title="如果拥有它"></a>如果拥有它</h2><p>一台可公网访问的服务器(设置是配置非常低的VPS)、一个域名、一条命令即可，步骤过于简单……安装文档可在官网查阅：<a href="https://voce.chat/">VoceChat</a></p><h2 id="它的优势以及……？"><a href="#它的优势以及……？" class="headerlink" title="它的优势以及……？"></a>它的优势以及……？</h2><ul><li>优势<ul><li>它是开源的，任何人可以使用它</li><li>提供了现成的网页挂件代码，可以作为在线客服功能使用，非常人性化</li><li>轻量化、体积小、占用低、性能强。不存在低配置的主机无法部署安装的困扰</li><li>支持Bot&#x2F;Webhook、玩法多样</li><li>API及文档齐全，具有开发能力的可以用其自行开发所需应用</li><li>开发团队阵容强大，迭代维护活跃，基本日更</li><li>社区氛围良好，官方人员没有架子，素质极高，乐于接受用户建议及意见</li></ul></li><li>……？<ul><li>服务端目前并未开源，社区版本提供免费的20个用户上限，但是付费不限制版本价格在同类产品中非常良心</li></ul></li></ul><h2 id="我正在用它做……"><a href="#我正在用它做……" class="headerlink" title="我正在用它做……"></a>我正在用它做……</h2><p>我就单纯想有一个自己的聊天APP和小伙伴玩，顺手给新博客加了个聊天功能（如右下角…）<br><img src="https://input-s3.mn.input.im/adm-group/1/20230301/63fe2b0f961ec.png" alt="网页聊天挂件"></p><h2 id="一点心得和想法"><a href="#一点心得和想法" class="headerlink" title="一点心得和想法"></a>一点心得和想法</h2><p>同类产品我也尝试了其它的，VoceChat或许不是功能最强大，产品最成熟的一款。它的小巧，它支持一次性且价格亲民的付费获取lifetime服务吸引了我，另外很重要一点，我联系官方人员购买付费版本之前有一系列咨询，官方人员不厌其烦地解释，也许初衷是不想错过某个潜在的“大客户”，尽管最终我并不是大客户，但我没感受到对方态度上的起伏，反而这样使人非常舒服和愉悦。在此之后我提了一些意见和建议，我也被拉进一个仅有他们开发团队成员在里边的一个小群组，确实！物以类聚人以群分，就技术能力而言，我和他们相比应该是连半只脚都没踏进去，但是他们依然非常友善。非常相信这样的团队一定能做出惊艳的、颠覆性的产品。</p><p>!!! warning End<br>    本文没分享什么干货；写篇小学生作文了….</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;它是什么&quot;&gt;&lt;a href=&quot;#它是什么&quot; class=&quot;headerlink&quot; title=&quot;它是什么&quot;&gt;&lt;/a&gt;它是什么&lt;/h2&gt;&lt;p&gt;它叫&lt;a href=&quot;https://voce.chat/&quot;&gt;VoceChat&lt;/a&gt;！简单点说，它是一款(半?)开源的、可</summary>
+      
     
     
     
+    <category term="笔记" scheme="https://ttt.td/category/%E7%AC%94%E8%AE%B0/"/>
     
+    
+    <category term="日常" scheme="https://ttt.td/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+    <category term="Docker" scheme="https://ttt.td/tags/Docker/"/>
+    
+    <category term="开源软件" scheme="https://ttt.td/tags/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   

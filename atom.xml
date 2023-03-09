@@ -6,7 +6,7 @@
   <link href="https://ttt.td/atom.xml" rel="self"/>
   
   <link href="https://ttt.td/"/>
-  <updated>2023-02-28T18:14:42.813Z</updated>
+  <updated>2023-03-09T17:11:18.270Z</updated>
   <id>https://ttt.td/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决Edge浏览器占用PrtSc快捷键</title>
+    <link href="https://ttt.td/2023/03/10/solve-edge-occupy-prtsc-shortcut-key.html"/>
+    <id>https://ttt.td/2023/03/10/solve-edge-occupy-prtsc-shortcut-key.html</id>
+    <published>2023-03-09T16:41:54.000Z</published>
+    <updated>2023-03-09T17:11:18.270Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>最近遇到个比较诡异的问题，我使用<code>Snipaste</code>软件并绑定了<code>PrtSc</code>为快捷键进行截图的过程中，它无法在微软Edge浏览器中选中区域截图，而是会被Edge截取整个页面，折腾了两天解决了，记录一下</p></blockquote><p>我的系统版本 Windows 11 22H2 22621.1344<br><img src="https://input-s3.mn.input.im/adm-group/1/20230310/640a101239883.png" alt="系统版本.png"></p><p>Snipaste版本为2.8.3-beta并绑定了PrtSc快捷键<br><img src="https://input-s3.mn.input.im/adm-group/1/20230310/640a1177620db.png" alt="Snipaste按键.png"></p><p>通过各种测试，发现造成该现象原因是我偶尔需要使用IE模式，所以需要将Edge设置管理员权限运行（系统用户非Administrator），而Snipaste也需要设置管理员权限启动才能捕获Edge窗口内容，直接在常规设置里边操作<br><img src="https://input-s3.mn.input.im/adm-group/1/20230310/640a126ac79a6.png" alt="Snipaste设置.png"></p><p>这样可以解决，虽然我怎么也想不明白为什么Edge可以使用PrtSc键截取页面，我在edge:&#x2F;&#x2F;flags中将<code>Enable Screenshot</code>设置为<code>Disable</code>并且系统中关闭了Prtsc绑定也不行</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;最近遇到个比较诡异的问题，我使用&lt;code&gt;Snipaste&lt;/code&gt;软件并绑定了&lt;code&gt;PrtSc&lt;/code&gt;为快捷键进行截图的过程中，它无法在微软Edge浏览器中选中区域截图，而是会被Edge截取整个页面，折腾了两天解决了，记录一下&lt;</summary>
+      
+    
+    
+    
+    <category term="笔记" scheme="https://ttt.td/category/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="日常" scheme="https://ttt.td/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+    <category term="Windows" scheme="https://ttt.td/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>创建一个自己的即时聊天应用——VoceChat</title>

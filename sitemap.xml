@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ttt.td/2023/03/10/solve-edge-occupy-prtsc-shortcut-key.html</loc>
+    
+    <lastmod>2023-03-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ttt.td/2023/02/28/create-own-im-app.html</loc>
     
     <lastmod>2023-02-28</lastmod>
@@ -94,7 +103,7 @@
 
   <url>
     <loc>https://ttt.td/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,70 +111,77 @@
   
   <url>
     <loc>https://ttt.td/tags/DNS/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ttt.td/tags/Linux/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ttt.td/tags/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ttt.td/tags/Docker/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ttt.td/tags/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ttt.td/tags/%E5%9B%BE%E5%BA%8A/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ttt.td/tags/Hexo/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ttt.td/tags/Windows/</loc>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ttt.td/tags/IDE/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ttt.td/tags/%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ttt.td/tags/vscode/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -174,21 +190,21 @@
   
   <url>
     <loc>https://ttt.td/category/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ttt.td/category/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ttt.td/category/%E8%B5%84%E6%BA%90/</loc>
-    <lastmod>2023-02-28</lastmod>
+    <lastmod>2023-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

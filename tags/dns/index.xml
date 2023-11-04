@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DNS on ToTheTop</title>
+    <link>https://ttt.td/tags/dns/</link>
+    <description>Recent content in DNS on ToTheTop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 04 Nov 2023 16:11:17 +0800</lastBuildDate><atom:link href="https://ttt.td/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用AdGuardHome搭建私有DNS并对ChinaDomain进行分流</title>
+      <link>https://ttt.td/2023/11/04/build-dns-filter-cn/</link>
+      <pubDate>Sat, 04 Nov 2023 16:11:17 +0800</pubDate>
+      
+      <guid>https://ttt.td/2023/11/04/build-dns-filter-cn/</guid>
+      <description>&lt;p&gt;使用AdGuardHome自建了一个自用的DNS服务用于抗污染，同时为上游设置国内DNS分流&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

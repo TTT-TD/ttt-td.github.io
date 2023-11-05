@@ -6,7 +6,16 @@
     <description>Recent content in 网络工具 on ToTheTop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 04 Nov 2023 19:39:14 +0800</lastBuildDate><atom:link href="https://ttt.td/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Nov 2023 17:22:22 +0800</lastBuildDate><atom:link href="https://ttt.td/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSH客户端工具Tabby的便携版折腾之路</title>
+      <link>https://ttt.td/2023/11/05/tabby-used-portable/</link>
+      <pubDate>Sun, 05 Nov 2023 17:22:22 +0800</pubDate>
+      
+      <guid>https://ttt.td/2023/11/05/tabby-used-portable/</guid>
+      <description>将Tabby变成绿色便携版，放在U盘或者网盘即可随时使用</description>
+    </item>
+    
     <item>
       <title>Shodan的基本使用</title>
       <link>https://ttt.td/2023/11/04/easy-to-use-shodan/</link>

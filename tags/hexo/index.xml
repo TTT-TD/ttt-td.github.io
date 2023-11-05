@@ -5,7 +5,7 @@
     <link>https://ttt.td/tags/hexo/</link>
     <description>Recent content in Hexo on ToTheTop</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <lastBuildDate>Sat, 04 Nov 2023 19:18:29 +0800</lastBuildDate><atom:link href="https://ttt.td/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自建Giscus为Hexo添加评论功能</title>

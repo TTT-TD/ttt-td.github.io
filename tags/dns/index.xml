@@ -5,7 +5,7 @@
     <link>https://ttt.td/tags/dns/</link>
     <description>Recent content in DNS on ToTheTop</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <lastBuildDate>Sat, 04 Nov 2023 16:11:17 +0800</lastBuildDate><atom:link href="https://ttt.td/tags/dns/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用AdGuardHome搭建私有DNS并对ChinaDomain进行分流</title>

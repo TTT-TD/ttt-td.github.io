@@ -13,7 +13,7 @@
       <pubDate>Sat, 04 Nov 2023 19:41:49 +0800</pubDate>
       
       <guid>https://ttt.td/2023/11/04/harmonyos4-install-gms/</guid>
-      <description>&lt;p&gt;手机是Mate40Pro，老机型了，刚买到手的时候是EMUI，由于对Google应用存在一定依赖性，而平时日常工作生活华为周边带来不少便利性以及习惯因素，致使我没条件换其它品牌的全家桶可是又想使用Google相关软件，所以买回来第一件事安装了Google套件，然而从EMUI11到HarmonyOS2.0，3.0版本，Google应用在我手机上工作一切正常，直到近期升级到了4.0 Beta版本，发现Google已经弹窗设备未认证&lt;/p&gt;</description>
+      <description>华为鸿蒙4.0安装Google套件的尝试</description>
     </item>
     
     <item>
@@ -22,8 +22,7 @@
       <pubDate>Sat, 04 Nov 2023 19:39:14 +0800</pubDate>
       
       <guid>https://ttt.td/2023/11/04/easy-to-use-shodan/</guid>
-      <description>&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
-&lt;p&gt;Shodan是世界上第一个搜索引擎，用于搜索互联网上的连接设备。通过Shodan，用户可以找到服务器、网络摄像头、打印机、路由器等设备。Shodan收集了互联网上所有设备的信息，包括设备的IP地址、开放的端口、操作系统、服务等。这些信息对于网络安全研究人员、大公司和执法机构来说非常有价值。Shodan的目标是帮助世界理解互联网的复杂性，提高人们对网络安全的认识。&lt;/p&gt;</description>
+      <description>shodan的基本使用</description>
     </item>
     
     <item>
@@ -54,9 +53,7 @@
       <pubDate>Sat, 04 Nov 2023 19:22:08 +0800</pubDate>
       
       <guid>https://ttt.td/2023/11/04/build-memos/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;一个轻量级的自托管备忘录。  开源且永远免费。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>使用源码编译二进制Memos开元的笔记应用</description>
     </item>
     
     <item>
@@ -77,7 +74,7 @@
       <pubDate>Sat, 04 Nov 2023 19:14:28 +0800</pubDate>
       
       <guid>https://ttt.td/2023/11/04/free-img-hosting/</guid>
-      <description>&lt;p&gt;嗯&lt;/p&gt;</description>
+      <description>分享自己使用LskyPro程序部署了一套图床</description>
     </item>
     
     <item>
@@ -86,7 +83,7 @@
       <pubDate>Sat, 04 Nov 2023 16:11:17 +0800</pubDate>
       
       <guid>https://ttt.td/2023/11/04/build-dns-filter-cn/</guid>
-      <description>&lt;p&gt;使用AdGuardHome自建了一个自用的DNS服务用于抗污染，同时为上游设置国内DNS分流&lt;/p&gt;</description>
+      <description>使用AdGuardHome搭建私有DNS并对ChinaDomain进行分流</description>
     </item>
     
   </channel>

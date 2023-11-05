@@ -3,16 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ttt.td/categories/</loc>
-    <lastmod>2023-11-04T19:41:49+08:00</lastmod>
+    <lastmod>2023-11-05T17:10:47+08:00</lastmod>
   </url><url>
     <loc>https://ttt.td/posts/</loc>
-    <lastmod>2023-11-04T19:41:49+08:00</lastmod>
+    <lastmod>2023-11-05T17:10:47+08:00</lastmod>
   </url><url>
     <loc>https://ttt.td/tags/</loc>
-    <lastmod>2023-11-04T19:41:49+08:00</lastmod>
+    <lastmod>2023-11-05T17:10:47+08:00</lastmod>
   </url><url>
     <loc>https://ttt.td/</loc>
-    <lastmod>2023-11-04T19:41:49+08:00</lastmod>
+    <lastmod>2023-11-05T17:10:47+08:00</lastmod>
+  </url><url>
+    <loc>https://ttt.td/tags/vscode/</loc>
+    <lastmod>2023-11-05T17:10:47+08:00</lastmod>
+  </url><url>
+    <loc>https://ttt.td/2023/11/05/adding-context-munes-and-file-association-to-vscode/</loc>
+    <lastmod>2023-11-05T17:10:47+08:00</lastmod>
+  </url><url>
+    <loc>https://ttt.td/categories/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2023-11-05T17:10:47+08:00</lastmod>
+  </url><url>
+    <loc>https://ttt.td/tags/%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
+    <lastmod>2023-11-05T17:10:47+08:00</lastmod>
+  </url><url>
+    <loc>https://ttt.td/categories/%E8%B5%84%E6%BA%90/</loc>
+    <lastmod>2023-11-05T17:10:47+08:00</lastmod>
   </url><url>
     <loc>https://ttt.td/2023/11/04/harmonyos4-install-gms/</loc>
     <lastmod>2023-11-04T19:41:49+08:00</lastmod>
@@ -53,9 +68,6 @@
     <loc>https://ttt.td/2023/11/04/build-memos/</loc>
     <lastmod>2023-11-04T19:22:08+08:00</lastmod>
   </url><url>
-    <loc>https://ttt.td/categories/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2023-11-04T19:22:08+08:00</lastmod>
-  </url><url>
     <loc>https://ttt.td/tags/hexo/</loc>
     <lastmod>2023-11-04T19:18:29+08:00</lastmod>
   </url><url>
@@ -69,9 +81,6 @@
     <lastmod>2023-11-04T19:14:28+08:00</lastmod>
   </url><url>
     <loc>https://ttt.td/tags/%E5%9B%BE%E5%BA%8A/</loc>
-    <lastmod>2023-11-04T19:14:28+08:00</lastmod>
-  </url><url>
-    <loc>https://ttt.td/categories/%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2023-11-04T19:14:28+08:00</lastmod>
   </url><url>
     <loc>https://ttt.td/tags/dns/</loc>

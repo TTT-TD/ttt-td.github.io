@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>日常 on ToTheTop</title>
-    <link>https://ttt.td/categories/%E6%97%A5%E5%B8%B8/</link>
-    <description>Recent content in 日常 on ToTheTop</description>
+    <title>VSCode on ToTheTop</title>
+    <link>https://ttt.td/tags/vscode/</link>
+    <description>Recent content in VSCode on ToTheTop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Nov 2023 17:10:47 +0800</lastBuildDate><atom:link href="https://ttt.td/categories/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Nov 2023 17:10:47 +0800</lastBuildDate><atom:link href="https://ttt.td/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>为VSCode添加右键菜单以及注册文件关联</title>
       <link>https://ttt.td/2023/11/05/adding-context-munes-and-file-association-to-vscode/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://ttt.td/2023/11/05/adding-context-munes-and-file-association-to-vscode/</guid>
       <description>为VSCode添加右键菜单以及注册文件关联</description>
-    </item>
-    
-    <item>
-      <title>二进制编译Memos开源笔记应用</title>
-      <link>https://ttt.td/2023/11/04/build-memos/</link>
-      <pubDate>Sat, 04 Nov 2023 19:22:08 +0800</pubDate>
-      
-      <guid>https://ttt.td/2023/11/04/build-memos/</guid>
-      <description>使用源码编译二进制Memos开元的笔记应用</description>
     </item>
     
   </channel>

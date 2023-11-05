@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hugo on ToTheTop</title>
+    <link>https://ttt.td/tags/hugo/</link>
+    <description>Recent content in Hugo on ToTheTop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 04 Nov 2023 19:18:29 +0800</lastBuildDate><atom:link href="https://ttt.td/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自建Giscus为Hexo添加评论功能</title>
+      <link>https://ttt.td/2023/11/04/self-hosting-giscus/</link>
+      <pubDate>Sat, 04 Nov 2023 19:18:29 +0800</pubDate>
+      
+      <guid>https://ttt.td/2023/11/04/self-hosting-giscus/</guid>
+      <description>&lt;p&gt;差不多折腾完Hexo应用，弄评论功能的时候找了一下评论相关插件，然后看到了这么一篇文章
+&lt;a href=&#34;https://www.v2ex.com/t/535608&#34;&gt;建议大家弃用 Gitalk 和 Gitment 等权限过高的 Github OAuth App&lt;/a&gt;
+翻了一堆资料找到了这个项目：&lt;a href=&#34;https://github.com/giscus/giscus&#34;&gt;Giscus&lt;/a&gt;
+这个不属于OAuth应用，与此同时，我想自建！！做一下记录&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,16 @@
     <description>Recent content in Categories on ToTheTop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 05 Nov 2023 17:22:22 +0800</lastBuildDate><atom:link href="https://ttt.td/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Nov 2023 05:09:16 +0800</lastBuildDate><atom:link href="https://ttt.td/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>笔记</title>
+      <link>https://ttt.td/categories/%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 20 Nov 2023 05:09:16 +0800</pubDate>
+      
+      <guid>https://ttt.td/categories/%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>资源</title>
       <link>https://ttt.td/categories/%E8%B5%84%E6%BA%90/</link>
@@ -22,15 +31,6 @@
       <pubDate>Sun, 05 Nov 2023 17:10:47 +0800</pubDate>
       
       <guid>https://ttt.td/categories/%E6%97%A5%E5%B8%B8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>笔记</title>
-      <link>https://ttt.td/categories/%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Sat, 04 Nov 2023 19:41:49 +0800</pubDate>
-      
-      <guid>https://ttt.td/categories/%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
     
